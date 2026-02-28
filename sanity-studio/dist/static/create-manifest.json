@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "createdAt": "2026-02-28T18:48:39.583Z",
+  "workspaces": [
+    {
+      "name": "default",
+      "title": "YVB Fragrances CMS",
+      "basePath": "/",
+      "projectId": "xa70vklg",
+      "dataset": "production",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><rect width=\"32\" height=\"32\" rx=\"2\" fill=\"#b14802\"></rect><text x=\"50%\" y=\"50%\" text-anchor=\"middle\" alignment-baseline=\"middle\" fill=\"hsla(24, 98%, 0%, 1)\" style=\"font-family:Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Liberation Sans&quot;, Helvetica, Arial, system-ui, sans-serif;font-weight:500;font-size:13px;transform:translateY(1px)\">YF</text></svg>",
+      "mediaLibrary": {
+        "enabled": false,
+        "__internal": {}
+      },
+      "schema": "19cd6e8f.create-schema.json",
+      "tools": "ed2a78a6.create-tools.json"
+    }
+  ],
+  "studioVersion": "5.12.0"
+}

@@ -1,0 +1,329 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 2
+              },
+              {
+                "flag": "max",
+                "constraint": 100
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Product Name"
+      },
+      {
+        "options": {
+          "source": "name",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Men",
+              "value": "men"
+            },
+            {
+              "title": "Women",
+              "value": "women"
+            }
+          ]
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "men",
+                  "women"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "gender",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 0
+              },
+              {
+                "flag": "min",
+                "constraint": 0
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "price",
+        "type": "number",
+        "title": "Price (USD)"
+      },
+      {
+        "rows": 4,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 10
+              },
+              {
+                "flag": "max",
+                "constraint": 500
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "fields": [
+          {
+            "name": "alt",
+            "type": "string",
+            "title": "Alt Text"
+          }
+        ],
+        "name": "image",
+        "type": "image",
+        "title": "Product Image"
+      },
+      {
+        "defaultValue": false,
+        "name": "bestseller",
+        "type": "boolean",
+        "title": "Best Seller"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Eau de Parfum",
+              "value": "eau_de_parfum"
+            },
+            {
+              "title": "Eau de Toilette",
+              "value": "eau_de_toilette"
+            },
+            {
+              "title": "Parfum",
+              "value": "parfum"
+            },
+            {
+              "title": "Cologne",
+              "value": "cologne"
+            }
+          ]
+        },
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "defaultValue": true,
+        "name": "inStock",
+        "type": "boolean"
+      }
+    ],
+    "name": "product",
+    "type": "document",
+    "title": "Products"
+  },
+  {
+    "fields": [
+      {
+        "readOnly": true,
+        "name": "orderId",
+        "type": "number",
+        "title": "Order ID"
+      },
+      {
+        "readOnly": true,
+        "name": "customerName",
+        "type": "string"
+      },
+      {
+        "readOnly": true,
+        "name": "customerEmail",
+        "type": "string"
+      },
+      {
+        "readOnly": true,
+        "name": "customerPhone",
+        "type": "string"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Pending",
+              "value": "pending"
+            },
+            {
+              "title": "Processing",
+              "value": "processing"
+            },
+            {
+              "title": "Shipped",
+              "value": "shipped"
+            },
+            {
+              "title": "Out for Delivery",
+              "value": "out_for_delivery"
+            },
+            {
+              "title": "Delivered",
+              "value": "delivered"
+            },
+            {
+              "title": "Cancelled",
+              "value": "cancelled"
+            }
+          ]
+        },
+        "initialValue": "pending",
+        "name": "status",
+        "type": "string",
+        "title": "Order Status"
+      },
+      {
+        "readOnly": true,
+        "name": "total",
+        "type": "number",
+        "title": "Total Amount (PKR)"
+      },
+      {
+        "initialValue": "Cash on Delivery",
+        "readOnly": true,
+        "name": "paymentMethod",
+        "type": "string"
+      },
+      {
+        "readOnly": true,
+        "name": "shippingAddress",
+        "type": "text"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "productName",
+                "type": "string"
+              },
+              {
+                "name": "quantity",
+                "type": "number"
+              },
+              {
+                "name": "price",
+                "type": "number",
+                "title": "Price (PKR)"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "readOnly": true,
+        "name": "items",
+        "type": "array",
+        "title": "Order Items"
+      },
+      {
+        "description": "Add tracking number when order is shipped",
+        "name": "trackingNumber",
+        "type": "string"
+      },
+      {
+        "description": "Add notes about this order (not visible to customer)",
+        "name": "notes",
+        "type": "text",
+        "title": "Internal Notes"
+      },
+      {
+        "readOnly": true,
+        "name": "orderDate",
+        "type": "datetime"
+      },
+      {
+        "readOnly": true,
+        "name": "shippedDate",
+        "type": "datetime"
+      },
+      {
+        "readOnly": true,
+        "name": "deliveredDate",
+        "type": "datetime"
+      }
+    ],
+    "name": "order",
+    "type": "document",
+    "title": "Orders"
+  }
+]
