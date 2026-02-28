@@ -76,10 +76,10 @@ export default async function WomenPage() {
           <div className="mb-12">
             <div className="flex items-center justify-between mb-8">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <h2 className="text-3xl md:text-4xl font-bold text-black mb-2">
                   Our Fragrances
                 </h2>
-                <p className="text-white/70">
+                <p className="text-black/60">
                   {products.length} premium scents available
                 </p>
               </div>
