@@ -55,11 +55,11 @@ body {
 }
 
 .glass-navy {
-  background: linear-gradient(135deg, rgba(0, 35, 102, 0.3) 0%, rgba(0, 35, 102, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(0, 35, 102, 0.1) 0%, rgba(0, 35, 102, 0.05) 100%);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(0, 35, 102, 0.4);
-  box-shadow: 0 8px 32px rgba(0, 35, 102, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 35, 102, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 35, 102, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .glass-cherry {
