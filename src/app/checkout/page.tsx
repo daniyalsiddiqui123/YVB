@@ -101,7 +101,7 @@ export default function CheckoutPage() {
         console.error("Order failed:", result.error);
         alert(result.error || "Failed to create order. Please try again.");
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Checkout error:", error);
       alert(`Error: ${error.message || "An error occurred. Please try again."}`);
     } finally {
