@@ -149,7 +149,7 @@ export default function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <Link
-                    href={link.href}
+                    href={link.href as string}
                     className="text-white/70 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block"
                   >
                     {link.label}
@@ -174,7 +174,7 @@ export default function Footer() {
               {customerService.map((link) => (
                 <li key={link.label}>
                   <Link
-                    href={link.href}
+                    href={link.href as string}
                     className="text-white/70 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block"
                   >
                     {link.label}
@@ -199,7 +199,7 @@ export default function Footer() {
               {company.map((link) => (
                 <li key={link.label}>
                   <Link
-                    href={link.href}
+                    href={link.href as string}
                     className="text-white/70 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block"
                   >
                     {link.label}
