@@ -47,7 +47,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-navy via-[#001a4d] to-cherry text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-navy/90 via-[#001a4d]/90 to-cherry/90 backdrop-blur-xl text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
 
