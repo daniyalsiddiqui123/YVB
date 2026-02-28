@@ -92,7 +92,8 @@ export default {
               quantity: "quantity",
               price: "price",
             },
-            prepare({ productName, quantity, price }) {
+            prepare(selection: any) {
+              const { productName, quantity, price } = selection;
               return {
                 title: productName,
                 subtitle: `Qty: ${quantity} - Rs. ${price?.toLocaleString('en-PK')}`,
