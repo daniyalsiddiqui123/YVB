@@ -82,7 +82,7 @@ export async function createOrder(
       } else {
         console.log('Email not configured - order created but no emails sent');
       }
-    } catch (emailError) {
+    } catch (emailError: any) {
       console.error('Email sending failed (order still created):', emailError.message);
     }
 
