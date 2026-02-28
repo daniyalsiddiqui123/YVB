@@ -87,7 +87,7 @@ export async function createOrder(
     }
 
     return { success: true, orderId: order.id };
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error creating order:", error);
     return { success: false, error: error.message || "Failed to create order" };
   }
