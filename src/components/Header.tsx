@@ -38,7 +38,7 @@ export default function Header() {
       <header className="fixed top-0 left-0 right-0 z-50">
         <div className="h-full w-full bg-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl border-b border-white/20">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
+            <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
               {/* Logo - YVB on Left */}
               <div className="flex-shrink-0">
                 <Link href={ROUTES.HOME} className="flex items-center space-x-2 group">
@@ -46,7 +46,7 @@ export default function Header() {
                     whileHover={{ scale: 1.05 }}
                     className="relative"
                   >
-                    <span className="text-xl sm:text-2xl md:text-3xl font-black bg-gradient-to-br from-navy via-[#002366] to-cherry bg-clip-text text-transparent drop-shadow-lg">
+                    <span className="text-2xl sm:text-3xl md:text-4xl font-black bg-gradient-to-br from-navy via-[#002366] to-cherry bg-clip-text text-transparent drop-shadow-lg">
                       YVB
                     </span>
                   </motion.div>
@@ -75,15 +75,15 @@ export default function Header() {
               </nav>
 
               {/* Right Side Actions */}
-              <div className="flex items-center space-x-1.5 sm:space-x-2">
+              <div className="flex items-center space-x-2 sm:space-x-2.5">
                 {/* Cart */}
-                <Link href={ROUTES.CART} className="relative p-1.5 sm:p-2 rounded-lg glass-card-hover hover:scale-110 transition-all">
-                  <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
+                <Link href={ROUTES.CART} className="relative p-2 sm:p-2.5 rounded-lg glass-card-hover hover:scale-110 transition-all">
+                  <ShoppingCart className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
                   {cartItemCount > 0 && (
                     <motion.span
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      className="absolute -top-1 -right-1 bg-gradient-to-r from-red-500 to-red-600 text-white text-[10px] w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center font-bold shadow-lg border-2 border-white"
+                      className="absolute -top-1 -right-1 bg-gradient-to-r from-red-500 to-red-600 text-white text-xs w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center font-bold shadow-lg border-2 border-white"
                     >
                       {cartItemCount}
                     </motion.span>
@@ -96,9 +96,9 @@ export default function Header() {
                     <div className="relative hidden md:block">
                       <button
                         onClick={() => setIsProfileOpen(!isProfileOpen)}
-                        className="p-1.5 sm:p-2 rounded-lg glass-card-hover hover:scale-110 transition-all"
+                        className="p-2 sm:p-2.5 rounded-lg glass-card-hover hover:scale-110 transition-all"
                       >
-                        <User className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
+                        <User className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
                       </button>
 
                       <AnimatePresence>
@@ -155,12 +155,12 @@ export default function Header() {
                 {/* Mobile Menu Button */}
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="lg:hidden p-1.5 sm:p-2 rounded-lg glass-card-hover"
+                  className="lg:hidden p-2 sm:p-2.5 rounded-lg glass-card-hover hover:scale-110 transition-all"
                 >
                   {isMenuOpen ? (
-                    <X className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
+                    <X className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
                   ) : (
-                    <Menu className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
+                    <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
                   )}
                 </button>
               </div>
