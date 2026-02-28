@@ -1,0 +1,3 @@
+# Ignore Sanity Studio during Vercel build
+sanity-studio/**/*
+node_modules
