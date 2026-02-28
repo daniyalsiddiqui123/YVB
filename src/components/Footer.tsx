@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import type { Route } from "next";
 import { motion } from "framer-motion";
 import {
   Instagram,
@@ -24,206 +25,103 @@ export default function Footer() {
     { icon: Twitter, href: "#", label: "Twitter" },
   ];
 
-  const quickLinks = [
-    { href: String(ROUTES.HOME), label: "Home" },
-    { href: String(ROUTES.MEN), label: "Men" },
-    { href: String(ROUTES.WOMEN), label: "Women" },
-    { href: String(ROUTES.CART), label: "Cart" },
+  const quickLinks: { href: Route; label: string }[] = [
+    { href: ROUTES.HOME, label: "Home" },
+    { href: ROUTES.MEN, label: "Men" },
+    { href: ROUTES.WOMEN, label: "Women" },
+    { href: ROUTES.CART, label: "Cart" },
   ];
 
-  const customerService = [
-    { href: "#", label: "Contact Us" },
-    { href: "#", label: "Shipping Info" },
-    { href: "#", label: "Returns" },
-    { href: "#", label: "FAQ" },
+  const customerService: { href: Route; label: string }[] = [
+    { href: "/contact" as Route, label: "Contact Us" },
+    { href: "/shipping" as Route, label: "Shipping Info" },
+    { href: "/returns" as Route, label: "Returns" },
+    { href: "/faq" as Route, label: "FAQ" },
   ];
 
-  const company = [
-    { href: "#", label: "About Us" },
-    { href: "#", label: "Privacy Policy" },
-    { href: "#", label: "Terms of Service" },
-    { href: "#", label: "Careers" },
+  const company: { href: Route; label: string }[] = [
+    { href: "/about" as Route, label: "About Us" },
+    { href: "/privacy" as Route, label: "Privacy Policy" },
+    { href: "/terms" as Route, label: "Terms of Service" },
+    { href: "/careers" as Route, label: "Careers" },
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-navy via-[#001a4d] to-cherry text-white overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `radial-gradient(circle at 3px 3px, rgba(255,255,255,0.2) 1px, transparent 0)`,
-            backgroundSize: "40px 40px",
-          }}
-        />
-      </div>
+    <footer className="bg-black text-white">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
 
-      {/* Floating Orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{ scale: [1, 1.2, 1], x: [0, 50, 0] }}
-          transition={{ duration: 15, repeat: Infinity }}
-          className="absolute top-20 left-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{ scale: [1, 1.3, 1], x: [0, -50, 0] }}
-          transition={{ duration: 18, repeat: Infinity }}
-          className="absolute bottom-20 right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"
-        />
-      </div>
+          {/* Brand */}
+          <div>
+            <Link href={ROUTES.HOME}>
+              <h2 className="text-2xl font-bold mb-4">YVB FRAGRANCES</h2>
+            </Link>
+            <p className="text-white/70 mb-6">
+              Discover luxury fragrances crafted with elegance and precision.
+            </p>
 
-      {/* Main Footer Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
-        {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
-          {/* Brand Column */}
-          <div className="lg:col-span-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <Link
-                href={ROUTES.HOME}
-                className="inline-flex items-center space-x-3 mb-6"
-              >
-                <div className="text-3xl font-black bg-gradient-to-r from-white via-white/90 to-white/80 bg-clip-text text-transparent">
-                  YVB FRAGRANCES
-                </div>
-              </Link>
-
-              <p className="text-white/80 leading-relaxed mb-6 max-w-sm">
-                Discover luxury fragrances that define elegance and
-                sophistication. Premium scents crafted with the finest
-                ingredients from around the world.
-              </p>
-
-              {/* Social Links */}
-              <div className="flex items-center space-x-4">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={social.label}
-                    href={social.href}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="w-12 h-12 rounded-xl glass-card flex items-center justify-center hover:scale-110 hover:bg-white/10 transition-all duration-300 group"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-5 h-5 text-white/80 group-hover:text-white transition-colors" />
-                  </motion.a>
-                ))}
-              </div>
-
-              {/* Contact Info */}
-              <div className="mt-8 space-y-3">
-                <div className="flex items-center space-x-3 text-white/70">
-                  <Mail className="w-5 h-5" />
-                  <span className="text-sm">contact@yvbfragrances.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-white/70">
-                  <Phone className="w-5 h-5" />
-                  <span className="text-sm">+92 3001234567</span>
-                </div>
-                <div className="flex items-center space-x-3 text-white/70">
-                  <MapPin className="w-5 h-5" />
-                  <span className="text-sm">Pakistan, Karachi</span>
-                </div>
-              </div>
-            </motion.div>
+            <div className="flex gap-4">
+              {socialLinks.map((social) => (
+                <a key={social.label} href={social.href}>
+                  <social.icon className="w-5 h-5 hover:scale-110 transition" />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <h3 className="text-lg font-bold mb-6 flex items-center space-x-2">
-              <ShoppingBag className="w-5 h-5" />
-              <span>Quick Links</span>
+          <div>
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <ShoppingBag className="w-4 h-4" /> Quick Links
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block"
-                  >
+                  <Link href={link.href} className="text-white/70 hover:text-white">
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
-          {/* Customer Service */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <h3 className="text-lg font-bold mb-6 flex items-center space-x-2">
-              <Heart className="w-5 h-5" />
-              <span>Customer Care</span>
+          {/* Customer Care */}
+          <div>
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <Heart className="w-4 h-4" /> Customer Care
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {customerService.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block"
-                  >
+                  <Link href={link.href} className="text-white/70 hover:text-white">
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Company */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-          >
-            <h3 className="text-lg font-bold mb-6 flex items-center space-x-2">
-              <Star className="w-5 h-5" />
-              <span>Company</span>
+          <div>
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <Star className="w-4 h-4" /> Company
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {company.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block"
-                  >
+                  <Link href={link.href} className="text-white/70 hover:text-white">
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
+
         </div>
 
-        {/* Bottom Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="border-t border-white/10 pt-8 mt-8"
-        >
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Copyright */}
-            <div className="text-white/60 text-sm text-center md:text-left">
-              <p>© {currentYear} YVB Fragrances. All rights reserved.</p>
-            </div>
-          </div>
-        </motion.div>
+        <div className="border-t border-white/10 mt-12 pt-6 text-center text-white/50 text-sm">
+          © {currentYear} YVB Fragrances. All rights reserved.
+        </div>
       </div>
     </footer>
   );
