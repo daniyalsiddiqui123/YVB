@@ -260,14 +260,14 @@ body {
   background: linear-gradient(135deg, #002366 0%, #001a4d 50%, #002366 100%);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  filter: brightness(0.75);
+  filter: brightness(0.5);
 }
 
 .section-women {
   background: linear-gradient(135deg, #990F02 0%, #7a0c02 50%, #990F02 100%);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  filter: brightness(0.75);
+  filter: brightness(0.5);
 }
 
 /* Text Gradients - Enhanced */
