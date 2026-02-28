@@ -59,14 +59,17 @@ export default function ProfilePage() {
 
     async function fetchOrders() {
       try {
-        console.log("Fetching orders for email:", session.user.email);
-        const fetchedOrders = await getOrdersByCustomerEmail(session.user.email);
-        console.log("Fetched orders:", fetchedOrders);
+        const email = session?.user?.email;
+        if (!email) return;
         
+        console.log("Fetching orders for email:", email);
+        const fetchedOrders = await getOrdersByCustomerEmail(email);
+        console.log("Fetched orders:", fetchedOrders);
+
         if (!fetchedOrders || fetchedOrders.length === 0) {
           console.log("No orders found for this email");
         }
-        
+
         setOrders(fetchedOrders || []);
       } catch (err) {
         console.error("Error fetching orders:", err);
