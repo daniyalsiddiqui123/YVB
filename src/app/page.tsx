@@ -147,13 +147,13 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="glass-navy p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl text-center hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl"
-              >
-                <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl mb-3 sm:mb-4 ${
+                className={`p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl text-center hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl ${
                   feature.color === "navy"
-                    ? "bg-gradient-to-br from-white/20 to-white/10 shadow-lg"
-                    : "bg-gradient-to-br from-white/20 to-white/10 shadow-lg"
-                } text-white`}>
+                    ? "glass-navy"
+                    : "glass-cherry"
+                }`}
+              >
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl mb-3 sm:mb-4 bg-gradient-to-br from-white/20 to-white/10 shadow-lg text-white">
                   {feature.icon}
                 </div>
                 <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">
