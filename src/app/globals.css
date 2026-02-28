@@ -257,11 +257,15 @@ body {
 
 /* Section Themes - Enhanced */
 .section-men {
-  background: linear-gradient(135deg, rgba(0, 35, 102, 0.08) 0%, #ffffff 40%, rgba(0, 35, 102, 0.12) 100%);
+  background: linear-gradient(135deg, rgba(0, 35, 102, 0.15) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(0, 35, 102, 0.1) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
 .section-women {
-  background: linear-gradient(135deg, rgba(153, 15, 2, 0.08) 0%, #ffffff 40%, rgba(153, 15, 2, 0.12) 100%);
+  background: linear-gradient(135deg, rgba(153, 15, 2, 0.15) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(153, 15, 2, 0.1) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
 /* Text Gradients - Enhanced */
