@@ -258,9 +258,9 @@ body {
 /* Section Themes - Professional */
 .section-men {
   background: linear-gradient(135deg, 
-    rgba(0, 35, 102, 0.3) 0%, 
-    rgba(220, 230, 255, 0.75) 50%, 
-    rgba(0, 35, 102, 0.25) 100%
+    rgba(65, 105, 225, 0.25) 0%,    /* Light royal blue */
+    rgba(230, 240, 255, 0.8) 50%,    /* Very light blue center */
+    rgba(65, 105, 225, 0.2) 100%     /* Light royal blue edges */
   );
 }
 
