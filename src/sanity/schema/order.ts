@@ -142,8 +142,9 @@ export default {
       status: "status",
       orderDate: "orderDate",
     },
-    prepare({ orderId, customerName, total, status, orderDate }) {
-      const statusLabels = {
+    prepare(selection: any) {
+      const { orderId, customerName, total, status, orderDate } = selection;
+      const statusLabels: any = {
         pending: "🟡 Pending",
         processing: "🔵 Processing",
         shipped: "🚚 Shipped",
@@ -158,7 +159,7 @@ export default {
         title: `Order #${orderIdDisplay.substring(0, 8)}`,
         subtitle: `${customerName || 'Unknown'} - Rs. ${total?.toLocaleString('en-PK') || 0} - ${statusLabels[status] || status}`,
         media: () => {
-          const statusEmoji = {
+          const statusEmoji: any = {
             pending: "🟡",
             processing: "🔵",
             shipped: "🚚",
