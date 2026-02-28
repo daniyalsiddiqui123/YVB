@@ -147,12 +147,12 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="glass-card p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl text-center hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl"
+                className="glass-navy p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl text-center hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl"
               >
                 <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl mb-3 sm:mb-4 ${
                   feature.color === "navy"
-                    ? "bg-gradient-to-br from-navy to-navy/70 shadow-lg"
-                    : "bg-gradient-to-br from-cherry to-cherry/70 shadow-lg"
+                    ? "bg-gradient-to-br from-white/20 to-white/10 shadow-lg"
+                    : "bg-gradient-to-br from-white/20 to-white/10 shadow-lg"
                 } text-white`}>
                   {feature.icon}
                 </div>
@@ -177,7 +177,7 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="glass-card p-6 sm:p-10 md:p-14 lg:p-16 rounded-2xl sm:rounded-3xl text-center relative overflow-hidden shadow-2xl"
+            className="glass-navy p-6 sm:p-10 md:p-14 lg:p-16 rounded-2xl sm:rounded-3xl text-center relative overflow-hidden shadow-2xl"
           >
             <div className="relative z-10">
               <motion.h2
