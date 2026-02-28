@@ -28,45 +28,45 @@ export default async function WomenPage() {
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Hero Card */}
-          <div className="glass-cherry rounded-3xl p-8 md:p-16 mb-16 shadow-2xl">
+          <div className="rounded-3xl p-8 md:p-16 mb-16 shadow-2xl bg-gradient-to-br from-red-900/90 via-red-800/80 to-red-900/90 backdrop-blur-xl border border-red-400/30">
             <div className="max-w-3xl">
               {/* Badge */}
-              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-xl px-4 py-2 rounded-full mb-6 border border-white/20">
-                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                <span className="text-sm font-semibold text-white">PREMIUM COLLECTION</span>
+              <div className="inline-flex items-center space-x-2 bg-red-500/20 backdrop-blur-xl px-4 py-2 rounded-full mb-6 border border-red-300/30">
+                <Star className="w-4 h-4 text-yellow-300 fill-yellow-300" />
+                <span className="text-sm font-bold text-white">PREMIUM COLLECTION</span>
               </div>
 
               {/* Title */}
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight drop-shadow-lg">
                 Women's
                 <br />
-                <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-300 via-red-400 to-red-500 bg-clip-text text-transparent">
                   Collection
                 </span>
               </h1>
 
               {/* Description */}
-              <p className="text-white/80 text-lg md:text-xl mb-8 leading-relaxed">
+              <p className="text-red-100 text-lg md:text-xl mb-8 leading-relaxed font-medium">
                 Elegant, alluring, and captivating. Discover fragrances that embody feminine grace and enchant everyone around you.
               </p>
 
               {/* Features Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
-                  <Heart className="w-8 h-8 text-red-400 mb-2" />
-                  <span className="text-white font-semibold text-sm">Romantic Scents</span>
+                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-red-500/10 backdrop-blur-xl border border-red-400/30 hover:bg-red-500/20 transition-all">
+                  <Heart className="w-8 h-8 text-red-300 mb-2" />
+                  <span className="text-white font-bold text-sm">Romantic Scents</span>
                 </div>
-                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
-                  <Sparkles className="w-8 h-8 text-red-400 mb-2" />
-                  <span className="text-white font-semibold text-sm">Enchanting</span>
+                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-red-500/10 backdrop-blur-xl border border-red-400/30 hover:bg-red-500/20 transition-all">
+                  <Sparkles className="w-8 h-8 text-red-300 mb-2" />
+                  <span className="text-white font-bold text-sm">Enchanting</span>
                 </div>
-                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
-                  <Flower2 className="w-8 h-8 text-red-400 mb-2" />
-                  <span className="text-white font-semibold text-sm">Floral Notes</span>
+                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-red-500/10 backdrop-blur-xl border border-red-400/30 hover:bg-red-500/20 transition-all">
+                  <Flower2 className="w-8 h-8 text-red-300 mb-2" />
+                  <span className="text-white font-bold text-sm">Floral Notes</span>
                 </div>
-                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
-                  <Truck className="w-8 h-8 text-red-400 mb-2" />
-                  <span className="text-white font-semibold text-sm">Free Shipping</span>
+                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-red-500/10 backdrop-blur-xl border border-red-400/30 hover:bg-red-500/20 transition-all">
+                  <Truck className="w-8 h-8 text-red-300 mb-2" />
+                  <span className="text-white font-bold text-sm">Free Shipping</span>
                 </div>
               </div>
             </div>

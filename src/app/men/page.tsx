@@ -28,45 +28,45 @@ export default async function MenPage() {
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Hero Card */}
-          <div className="glass-navy rounded-3xl p-8 md:p-16 mb-16 shadow-2xl">
+          <div className="rounded-3xl p-8 md:p-16 mb-16 shadow-2xl bg-gradient-to-br from-blue-900/90 via-blue-800/80 to-blue-900/90 backdrop-blur-xl border border-blue-400/30">
             <div className="max-w-3xl">
               {/* Badge */}
-              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-xl px-4 py-2 rounded-full mb-6 border border-white/20">
-                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                <span className="text-sm font-semibold text-white">PREMIUM COLLECTION</span>
+              <div className="inline-flex items-center space-x-2 bg-blue-500/20 backdrop-blur-xl px-4 py-2 rounded-full mb-6 border border-blue-300/30">
+                <Star className="w-4 h-4 text-yellow-300 fill-yellow-300" />
+                <span className="text-sm font-bold text-white">PREMIUM COLLECTION</span>
               </div>
 
               {/* Title */}
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight drop-shadow-lg">
                 Men's
                 <br />
-                <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 bg-clip-text text-transparent">
                   Collection
                 </span>
               </h1>
 
               {/* Description */}
-              <p className="text-white/80 text-lg md:text-xl mb-8 leading-relaxed">
+              <p className="text-blue-100 text-lg md:text-xl mb-8 leading-relaxed font-medium">
                 Bold, sophisticated, and unforgettable. Discover fragrances that define modern masculinity and leave a lasting impression.
               </p>
 
               {/* Features Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
-                  <Shield className="w-8 h-8 text-blue-400 mb-2" />
-                  <span className="text-white font-semibold text-sm">Premium Quality</span>
+                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-blue-500/10 backdrop-blur-xl border border-blue-400/30 hover:bg-blue-500/20 transition-all">
+                  <Shield className="w-8 h-8 text-blue-300 mb-2" />
+                  <span className="text-white font-bold text-sm">Premium Quality</span>
                 </div>
-                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
-                  <Award className="w-8 h-8 text-blue-400 mb-2" />
-                  <span className="text-white font-semibold text-sm">Award Winning</span>
+                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-blue-500/10 backdrop-blur-xl border border-blue-400/30 hover:bg-blue-500/20 transition-all">
+                  <Award className="w-8 h-8 text-blue-300 mb-2" />
+                  <span className="text-white font-bold text-sm">Award Winning</span>
                 </div>
-                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
-                  <Clock className="w-8 h-8 text-blue-400 mb-2" />
-                  <span className="text-white font-semibold text-sm">24h Long Lasting</span>
+                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-blue-500/10 backdrop-blur-xl border border-blue-400/30 hover:bg-blue-500/20 transition-all">
+                  <Clock className="w-8 h-8 text-blue-300 mb-2" />
+                  <span className="text-white font-bold text-sm">24h Long Lasting</span>
                 </div>
-                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
-                  <Truck className="w-8 h-8 text-blue-400 mb-2" />
-                  <span className="text-white font-semibold text-sm">Free Shipping</span>
+                <div className="flex flex-col items-center text-center p-4 rounded-2xl bg-blue-500/10 backdrop-blur-xl border border-blue-400/30 hover:bg-blue-500/20 transition-all">
+                  <Truck className="w-8 h-8 text-blue-300 mb-2" />
+                  <span className="text-white font-bold text-sm">Free Shipping</span>
                 </div>
               </div>
             </div>

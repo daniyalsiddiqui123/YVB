@@ -258,20 +258,18 @@ body {
 /* Section Themes - Professional */
 .section-men {
   background: linear-gradient(135deg, 
-    rgba(65, 105, 225, 0.25) 0%,    /* Light royal blue */
-    rgba(230, 240, 255, 0.8) 50%,    /* Very light blue center */
-    rgba(65, 105, 225, 0.2) 100%     /* Light royal blue edges */
+    rgba(30, 58, 138, 0.4) 0%,      /* Darker royal blue */
+    rgba(219, 234, 254, 0.9) 50%,    /* Light blue-white center */
+    rgba(30, 58, 138, 0.3) 100%      /* Darker royal blue edges */
   );
-  filter: brightness(0.75);
 }
 
 .section-women {
   background: linear-gradient(135deg, 
-    rgba(153, 15, 2, 0.2) 0%, 
-    rgba(255, 235, 235, 0.7) 50%, 
-    rgba(153, 15, 2, 0.15) 100%
+    rgba(185, 28, 28, 0.4) 0%,       /* Darker cherry red */
+    rgba(254, 226, 226, 0.9) 50%,    /* Light pink-white center */
+    rgba(185, 28, 28, 0.3) 100%      /* Darker cherry red edges */
   );
-  filter: brightness(0.75);
 }
 
 /* Text Gradients - Enhanced */
