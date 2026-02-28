@@ -25,10 +25,10 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { href: ROUTES.HOME, label: "Home" },
-    { href: ROUTES.MEN, label: "Men" },
-    { href: ROUTES.WOMEN, label: "Women" },
-    { href: ROUTES.CART, label: "Cart" },
+    { href: String(ROUTES.HOME), label: "Home" },
+    { href: String(ROUTES.MEN), label: "Men" },
+    { href: String(ROUTES.WOMEN), label: "Women" },
+    { href: String(ROUTES.CART), label: "Cart" },
   ];
 
   const customerService = [
@@ -149,7 +149,7 @@ export default function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <Link
-                    href={link.href as string}
+                    href={link.href}
                     className="text-white/70 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block"
                   >
                     {link.label}
@@ -174,7 +174,7 @@ export default function Footer() {
               {customerService.map((link) => (
                 <li key={link.label}>
                   <Link
-                    href={link.href as string}
+                    href={link.href}
                     className="text-white/70 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block"
                   >
                     {link.label}
@@ -199,7 +199,7 @@ export default function Footer() {
               {company.map((link) => (
                 <li key={link.label}>
                   <Link
-                    href={link.href as string}
+                    href={link.href}
                     className="text-white/70 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block"
                   >
                     {link.label}
