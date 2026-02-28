@@ -262,7 +262,7 @@ body {
     rgba(230, 240, 255, 0.8) 50%,    /* Very light blue center */
     rgba(65, 105, 225, 0.2) 100%     /* Light royal blue edges */
   );
-  filter: brightness(0.85);
+  filter: brightness(0.75);
 }
 
 .section-women {
@@ -271,7 +271,7 @@ body {
     rgba(255, 235, 235, 0.7) 50%, 
     rgba(153, 15, 2, 0.15) 100%
   );
-  filter: brightness(0.85);
+  filter: brightness(0.75);
 }
 
 /* Text Gradients - Enhanced */
