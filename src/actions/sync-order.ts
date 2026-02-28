@@ -1,5 +1,3 @@
-"use server";
-
 import { createClient } from "@sanity/client";
 
 const sanityClient = createClient({
@@ -33,6 +31,7 @@ export async function syncOrderToSanity(orderData: {
       paymentMethod: orderData.paymentMethod,
       shippingAddress: orderData.shippingAddress,
       items: orderData.items.map((item) => ({
+        _type: "orderItem",
         productName: item.name,
         quantity: item.quantity,
         price: item.price,
@@ -71,6 +70,17 @@ export async function updateOrderStatusInSanity(
   }
 ) {
   try {
+    // First, find the document ID
+    const orderDoc = await sanityClient.fetch(
+      `*[_type == "order" && orderId == $orderId][0]`,
+      { orderId }
+    );
+
+    if (!orderDoc) {
+      console.log(`Order ${orderId} not found in Sanity`);
+      return null;
+    }
+
     const updates: any = {
       status,
     };
@@ -87,8 +97,9 @@ export async function updateOrderStatusInSanity(
       updates.deliveredDate = additionalData.deliveredDate;
     }
 
+    // Use the document ID to update
     const result = await sanityClient
-      .patch(`*[_type == "order" && orderId == $orderId][0]`, { orderId })
+      .patch(orderDoc._id)
       .set(updates)
       .commit();
 
