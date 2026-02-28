@@ -275,7 +275,7 @@ async function sendOrderEmails(
     await transporter.sendMail(customerEmail);
     console.log('Customer email sent successfully');
 
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error in sendOrderEmails:", error);
     console.error("Error details:", {
       message: error.message,
